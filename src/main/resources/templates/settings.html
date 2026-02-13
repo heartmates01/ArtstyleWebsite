@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Settings Main Page</title>
+</head>
+<body>
+<h1>Configure Settings.</h1>
+<ul>
+  <li th:each="setting: ${settings}">
+    <span th:text="${setting.type}">type</span>
+    <a
+        th:href="@{/settings/edit/{id}(id=${setting.id})}">edit</a>
+    <a
+        th:href="@{/settings/delete/{id}(id=${setting.id})}">delete</a>
+  </li>
+</ul>
+<p><a href="http://localhost:8080/settings/add">Add New Setting</a></p>
+
+<p><a href="http://localhost:8080/">Back to Main Menu</a></p>
+
+<p>(By settings, I mean visual settings such as nature paintings.)</p>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Palette Add Form</title>
+
+  <form action="#" th:action="@{/palettes/add}" method="post">
+
+    <label for="paletteName">Palette Name:</label><br>
+    <input type="text" id="paletteName" name="paletteName" value="Rainbow"><br>
+
+    <label for="color1">First Color:</label><br>
+    <input type="text" id="color1" name="color1" value="Red"><br>
+
+    <label for="color2">Second Color:</label><br>
+    <input type="text" id="color2" name="color2" value="Orange"><br>
+
+    <label for="color3">Third Color:</label><br>
+    <input type="text" id="color3" name="color3" value="Yellow"><br>
+
+    <label for="color4">Fourth Color:</label><br>
+    <input type="text" id="color4" name="color4" value="Green"><br>
+
+    <label for="color5">Fifth Color:</label><br>
+    <input type="text" id="color5" name="color5" value="Blue"><br>
+
+    <input type="submit" value="Submit">
+    <p>Leave the box empty if there aren't 5 or less colors.</p>
+
+  </form>
+</head>
+<body>
+
+</body>
+</html>

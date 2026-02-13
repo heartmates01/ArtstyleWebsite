@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Artstyles Main Page</title>
+</head>
+<body>
+<h1>Configure Artstyles.</h1>
+<ul>
+  <li th:each="artstyle: ${artstyles}">
+    <span th:text="${artstyle.style}">style</span>
+    <a
+        th:href="@{/artstyles/edit/{id}(id=${artstyle.id})}">edit</a>
+    <a
+        th:href="@{/artstyles/delete/{id}(id=${artstyle.id})}">delete</a>
+  </li>
+</ul>
+<p><a href="http://localhost:8080/artstyles/add">Add New Artstyle</a></p>
+
+<p><a href="http://localhost:8080/">Back to Main Menu</a></p>
+
+</body>
+</html>

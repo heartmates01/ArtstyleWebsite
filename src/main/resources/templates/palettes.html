@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Palettes Main Page</title>
+</head>
+<body>
+<h1>Configure Palettes.</h1>
+<ul>
+  <li th:each="palette: ${palettes}">
+    <span th:text="${palette.paletteName}">name</span>
+    <a
+        th:href="@{/palettes/edit/{id}(id=${palette.id})}">edit</a>
+    <a
+        th:href="@{/palettes/delete/{id}(id=${palette.id})}">delete</a>
+  </li>
+</ul>
+<p><a href="http://localhost:8080/palettes/add">Add New Palette</a></p>
+
+<p><a href="http://localhost:8080/">Back to Main Menu</a></p>
+
+
+</body>
+</html>

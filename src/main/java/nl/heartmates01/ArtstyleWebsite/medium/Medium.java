@@ -1,0 +1,45 @@
+package nl.heartmates01.ArtstyleWebsite.medium;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Medium {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+  private String type;
+
+  protected Medium() {
+  }
+
+  public Medium(String type) {
+    this.type = type;
+  }
+
+  @Override
+  public String toString() {
+    return String.format(
+        "Medium[id=%d, type='%s']",
+        id, type);
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public String getType() {
+    return type;
+  }
+}
