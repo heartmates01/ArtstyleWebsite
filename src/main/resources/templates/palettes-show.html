@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Palette Show Form</title>
+
+  <div class="row">
+    <a class="" th:href="@{/palettes/show/{id}(id=${palette.id})}"></a>
+
+    <p>NAME: </p>
+    <span th:text="${palette.paletteName}">paletteName</span>
+    <p>COLOR 1: </p>
+    <span th:text="${palette.color1}">color1</span>
+    <p>COLOR 2: </p>
+    <span th:text="${palette.color2}">color2</span>
+    <p>COLOR 3: </p>
+    <span th:text="${palette.color3}">color3</span>
+    <p>COLOR 4: </p>
+    <span th:text="${palette.color4}">color4</span>
+    <p>COLOR 5: </p>
+    <span th:text="${palette.color5}">color5</span>
+    <p>ID: </p>
+    <span th:text="${palette.id}">id</span>
+
+    <p><a href="http://localhost:8080/palettes">Back to Main Menu</a></p>
+  </div>
+</head>
