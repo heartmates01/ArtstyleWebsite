@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Mediums Show Form</title>
+
+  <div class="row">
+    <a class="" th:href="@{/mediums/show/{id}(id=${medium.id})}"></a>
+
+    <p>TYPE: </p>
+    <span th:text="${medium.type}">type</span>
+    <p>ID: </p>
+    <span th:text="${medium.id}">id</span>
+
+    <p><a href="http://localhost:8080/mediums">Back to Main Menu</a></p>
+  </div>
+</head>
