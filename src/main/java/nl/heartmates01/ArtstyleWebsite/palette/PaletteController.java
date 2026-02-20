@@ -61,4 +61,16 @@ public class PaletteController {
     paletteRepository.delete(palette);
     return "redirect:/palettes";
   }
+    //show
+  @GetMapping("/palettes/show/{palette}")
+  public String showPalette(@PathVariable Palette palette) {
+    return "palettes-show";
+  }
+
+  @PostMapping("/palettes/show")
+  public String showAllPaletteInfo(@Validated @ModelAttribute Palette palette) {
+    System.out.println(palette);
+    paletteRepository.findById(palette.getId());
+    return "redirect:/palettes";
+  }
 }
