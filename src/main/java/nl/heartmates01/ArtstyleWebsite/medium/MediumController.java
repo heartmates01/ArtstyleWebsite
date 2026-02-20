@@ -62,5 +62,16 @@ public class MediumController {
     mediumRepository.delete(medium);
     return "redirect:/mediums";
   }
+    //show
+  @GetMapping("/mediums/show/{medium}")
+  public String showMedium(@PathVariable Medium medium) {
+    return "mediums-show";
+  }
 
+  @PostMapping("/mediums/show")
+  public String showAllMediumInfo(@Validated @ModelAttribute Medium medium) {
+    System.out.println(medium);
+    mediumRepository.findById(medium.getId());
+    return "redirect:/mediums";
+  }
 }
