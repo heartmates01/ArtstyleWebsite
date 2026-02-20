@@ -61,4 +61,16 @@ public class SettingController {
     settingRepository.delete(setting);
     return "redirect:/settings";
   }
+    //show
+  @GetMapping("/settings/show/{setting}")
+  public String showSetting(@PathVariable Setting setting) {
+    return "settings-show";
+  }
+
+  @PostMapping("/settings/show")
+  public String showAllSettingInfo(@Validated @ModelAttribute Setting setting) {
+    System.out.println(setting);
+    settingRepository.findById(setting.getId());
+    return "redirect:/settings";
+  }
 }
