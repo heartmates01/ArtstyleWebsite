@@ -61,4 +61,16 @@ public class ArtstyleController {
     artstyleRepository.delete(artstyle);
     return "redirect:/artstyles";
   }
+    //show
+  @GetMapping("/artstyles/show/{artstyle}")
+  public String showArtstyle(@PathVariable Artstyle artstyle) {
+    return "artstyles-show";
+  }
+
+  @PostMapping("/artstyles/show")
+  public String showAllArtstyleInfo(@Validated @ModelAttribute Artstyle artstyle) {
+    System.out.println(artstyle);
+    artstyleRepository.findById(artstyle.getId());
+    return "redirect:/artstyles";
+  }
 }
