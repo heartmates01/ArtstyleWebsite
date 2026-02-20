@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Customers Show Form</title>
+
+  <div class="row">
+    <a class="" th:href="@{/customers/show/{id}(id=${customer.id})}"></a>
+
+    <p>FIRST NAME: </p>
+    <span th:text="${customer.firstName}">firstName</span>
+    <p>LAST NAME: </p>
+    <span th:text="${customer.lastName}">lastName</span>
+    <p>ID: </p>
+    <span th:text="${customer.id}">id</span>
+
+    <p><a href="http://localhost:8080/customers">Back to Main Menu</a></p>
+  </div>
+</head>
