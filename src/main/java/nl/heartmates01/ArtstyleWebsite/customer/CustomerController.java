@@ -62,4 +62,16 @@ public class CustomerController {
     customerRepository.delete(customer);
     return "redirect:/customers";
   }
+    //show
+  @GetMapping("/customers/show/{customer}")
+  public String showCustomer(@PathVariable Customer customer) {
+    return "customers-show";
+  }
+
+  @PostMapping("/customers/show")
+  public String showAllCustomerInfo(@Validated @ModelAttribute Customer customer) {
+    System.out.println(customer);
+    customerRepository.findById(customer.getId());
+    return "redirect:/customers";
+  }
 }
