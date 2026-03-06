@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" th:href="@{~/css/bootstrap.min.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{~/css/style.default.css}"/>
+</head>
+<body marginwidth="0" marginheight="0">
+<div class="container">
+  <div class="row">
+    <h1>Something Went Wrong.</h1>
+  </div>
+  <div class="row">That path doesn't seem to exist anymore, if it ever did.</div>
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">DATE:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${timestamp}"></span>
+    </div>
+  </div>
+
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">PATH:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${path}"></span>
+    </div>
+  </div>
+
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">ERROR:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${error}"></span>
+    </div>
+  </div>
+
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">STATUS:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${status}"></span>
+    </div>
+  </div>
+
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">MESSAGE:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${message}"></span>
+    </div>
+  </div>
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">EXCEPTION:</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${exception}"></span>
+    </div>
+  </div>
+  <div class="row rowDesign">
+    <div class="col-md-4 ml-auto">
+      <span class="legend">Trace</span>
+    </div>
+    <div class="col-md-8">
+      <span th:text="${trace}"></span>
+    </div>
+  </div>
+  <p><a href="http://localhost:8080/">Back to Home Page</a></p>
+</div>
+</body>
+</html>
