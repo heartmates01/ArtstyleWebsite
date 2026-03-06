@@ -10,4 +10,8 @@ public class WebController {
   public String showHomePage() {
     return "welcome";
   }
+    @GetMapping("/error")
+  public String showErrorPage() {
+    return "error";
+  }
 }
